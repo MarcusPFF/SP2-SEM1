@@ -24,7 +24,6 @@ public class Author {
         return total;
     }
 
-
     @Override
     public String toString() {
         return name + ": " + df.format(calculateTotalPay()) + " kr";

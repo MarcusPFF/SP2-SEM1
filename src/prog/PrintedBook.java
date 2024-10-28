@@ -1,6 +1,5 @@
 package prog;
 
-
 public class PrintedBook extends Title {
     private int pages;
 
