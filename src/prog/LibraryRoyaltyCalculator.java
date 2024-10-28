@@ -1,8 +1,9 @@
 package prog;
 
+import java.util.ArrayList;
+
 public class LibraryRoyaltyCalculator {
     public void runProgram() {
-
         // Creating author with data
         Author author1 = new Author("Marcus Forsberg");
         Title book1 = new PrintedBook("Den lille Havfrue", "SKØN", 500, 140);
@@ -23,13 +24,17 @@ public class LibraryRoyaltyCalculator {
         author3.addTitle(printTest2);
 
         // Calculate total pay for each author
-        float a1totalPay = author1.calculateTotalPay();
-        float a2totalPay = author2.calculateTotalPay();
-        float a3totalPay = author3.calculateTotalPay();
+        double a1totalPay = author1.calculateTotalPay();
+        double a2totalPay = author2.calculateTotalPay();
+        double a3totalPay = author3.calculateTotalPay();
 
-        // Print results
-        System.out.println(author1.getName() + ": " + a1totalPay + " kr");
-        System.out.println(author2.getName() + ": " + a2totalPay + " kr");
-        System.out.println(author3.getName() + ": " + a3totalPay + " kr");
+        ArrayList<Author> AuthorList = new ArrayList<>();
+        AuthorList.add(author1);
+        AuthorList.add(author2);
+        AuthorList.add(author3);
+
+        for (Author author : AuthorList) {
+            System.out.println(author);
+        }
     }
 }

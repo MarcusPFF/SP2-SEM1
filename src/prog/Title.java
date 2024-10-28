@@ -12,36 +12,12 @@ public abstract class Title {
         this.copies = copies;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getLiteratureType() {
         return literatureType;
     }
 
-    public void setLiteratureType(String literatureType) {
-        this.literatureType = literatureType;
-    }
-
     public int getCopies() {
         return copies;
-    }
-
-    public void setCopies(int copies) {
-        this.copies = copies;
-    }
-
-    public double getRate() {
-        return rate;
-    }
-
-    public void setRate(double rate) {
-        this.rate = rate;
     }
 
     public double calculateRoyalty() {

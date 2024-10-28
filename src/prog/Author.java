@@ -1,20 +1,14 @@
 package prog;
 
 import java.util.ArrayList;
+import java.text.DecimalFormat;
 
 public class Author {
     private String name;
     private ArrayList<Title> titles = new ArrayList<>();
+    private static final DecimalFormat df = new DecimalFormat("0.00");
 
     public Author(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
         this.name = name;
     }
 
@@ -22,12 +16,18 @@ public class Author {
         titles.add(title);
     }
 
-    public float calculateTotalPay() {
-        float total = 0;
+    public double calculateTotalPay() {
+        double total = 0;
         for (Title title : titles) {
             total += (float) title.calculateRoyalty();
         }
         return total;
+    }
+
+
+    @Override
+    public String toString() {
+        return name + ": " + df.format(calculateTotalPay()) + " kr";
     }
 }
 

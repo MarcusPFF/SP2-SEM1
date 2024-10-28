@@ -8,14 +8,6 @@ public class AudioBook extends Title {
         this.durationInMinutes = durationInMinutes;
     }
 
-    public int getDurationInMinutes() {
-        return durationInMinutes;
-    }
-
-    public void setDurationInMinutes(int durationInMinutes) {
-        this.durationInMinutes = durationInMinutes;
-    }
-
     @Override
     protected double calculatePoints() {
         return (durationInMinutes * 0.5) * getCopies() * calculateLiteraturePoints();
@@ -24,8 +16,7 @@ public class AudioBook extends Title {
     @Override
     protected double calculateLiteraturePoints() {
         return switch (getLiteratureType()) {
-            case "BI" -> 1.5;
-            case "TE" -> 1.5;
+            case "BI", "TE" -> 1.5;
             case "LYRIK" -> 3;
             case "SKØN" -> 0.85;
             case "FAG" -> 0.5;
