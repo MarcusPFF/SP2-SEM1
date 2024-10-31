@@ -14,7 +14,7 @@ public class LibraryRoyaltyCalculator {
         author1.addTitle(book2);
         author1.addTitle(audioBook);
 
-        // Test case authors
+        // Test cases (Values from the task)
         Author author2 = new Author("PrintedBook | #Testcase1");
         Title printTest1 = new PrintedBook("printTest", "TE", 140, 72);
         author2.addTitle(printTest1);
@@ -28,11 +28,13 @@ public class LibraryRoyaltyCalculator {
         double a2totalPay = author2.calculateTotalPay();
         double a3totalPay = author3.calculateTotalPay();
 
+        //Adding author1,2,3 to an ArrayList
         ArrayList<Author> AuthorList = new ArrayList<>();
         AuthorList.add(author1);
         AuthorList.add(author2);
         AuthorList.add(author3);
 
+        //Looping through the arraylist and printing out every Author.
         for (Author author : AuthorList) {
             System.out.println(author);
         }
